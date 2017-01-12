@@ -39,15 +39,12 @@ public class ExtExtElResolver extends ExtELResolver {
 
 	@Override
 	protected Object resolveProperty(ELContext elContext, Object base, String property) {
-
 		return null;
 	}
 
 	@Override
 	protected Object resolveVariable(ELContext elContext, String varName) {
-
 		Object value = null;
-
 		try {
 
 			if (varName.equals(I18N)) {
@@ -94,7 +91,6 @@ public class ExtExtElResolver extends ExtELResolver {
 
 	@Override
 	public Class<?> getCommonPropertyType(ELContext elContext, Object base) {
-
 		Class<?> commonPropertyType = null;
 
 		return commonPropertyType;
@@ -102,7 +98,6 @@ public class ExtExtElResolver extends ExtELResolver {
 
 	@Override
 	public void setValue(ELContext elContext, Object base, Object property, Object value) {
-
 		if (elContext == null) {
 
 			// Throw an exception as directed by the JavaDoc for ELContext.
@@ -124,7 +119,6 @@ public class ExtExtElResolver extends ExtELResolver {
 
 	@Override
 	public boolean isReadOnly(ELContext elContext, Object base, Object property) {
-
 		return true;
 	}
 

@@ -13,6 +13,8 @@
  */
 package joolz.test.i19n;
 
+import com.liferay.faces.util.context.ExtFacesContext;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Enumeration;
@@ -20,14 +22,13 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.liferay.faces.util.context.ExtFacesContext;
-
+import joolz.test.Stub;
 
 /**
  * @see com.liferay.faces.util.el.I18N
  * 
- * @author  Neil Griffin
- * @author  Joolz
+ * @author Neil Griffin
+ * @author Joolz
  */
 public class I19N extends I19NCompat {
 
@@ -43,14 +44,18 @@ public class I19N extends I19NCompat {
 	}
 
 	/**
-	 * Gets the message associated with the specified messageId according to the locale in the current FacesContext.
-	 * This method is primarily meant to be called via EL, providing the implementation supports passing parameters
+	 * Gets the message associated with the specified messageId according to the
+	 * locale in the current FacesContext. This method is primarily meant to be
+	 * called via EL, providing the implementation supports passing parameters
 	 * (like JBoss EL).
 	 *
-	 * @param   messageId  The message key.
-	 * @param   arg1       The first argument, assuming that the messageId has a {0} token.
+	 * @param messageId
+	 *            The message key.
+	 * @param arg1
+	 *            The first argument, assuming that the messageId has a {0}
+	 *            token.
 	 *
-	 * @return  The internationalized message.
+	 * @return The internationalized message.
 	 */
 	public String replace(String messageId, String arg1) {
 		ExtFacesContext extFacesContext = ExtFacesContext.getInstance();
@@ -60,15 +65,21 @@ public class I19N extends I19NCompat {
 	}
 
 	/**
-	 * Gets the message associated with the specified messageId according to the locale in the current FacesContext.
-	 * This method is primarily meant to be called via EL, providing the implementation supports passing parameters
+	 * Gets the message associated with the specified messageId according to the
+	 * locale in the current FacesContext. This method is primarily meant to be
+	 * called via EL, providing the implementation supports passing parameters
 	 * (like JBoss EL).
 	 *
-	 * @param   messageId  The message key.
-	 * @param   arg1       The first argument, assuming that the messageId has a {0} token.
-	 * @param   arg2       The second argument, assuming that the messageId has a {1} token.
+	 * @param messageId
+	 *            The message key.
+	 * @param arg1
+	 *            The first argument, assuming that the messageId has a {0}
+	 *            token.
+	 * @param arg2
+	 *            The second argument, assuming that the messageId has a {1}
+	 *            token.
 	 *
-	 * @return  The internationalized message.
+	 * @return The internationalized message.
 	 */
 	public String replace(String messageId, String arg1, String arg2) {
 		ExtFacesContext extFacesContext = ExtFacesContext.getInstance();
@@ -78,16 +89,24 @@ public class I19N extends I19NCompat {
 	}
 
 	/**
-	 * Gets the message associated with the specified messageId according to the locale in the current FacesContext.
-	 * This method is primarily meant to be called via EL, providing the implementation supports passing parameters
+	 * Gets the message associated with the specified messageId according to the
+	 * locale in the current FacesContext. This method is primarily meant to be
+	 * called via EL, providing the implementation supports passing parameters
 	 * (like JBoss EL).
 	 *
-	 * @param   messageId  The message key.
-	 * @param   arg1       The first argument, assuming that the messageId has a {0} token.
-	 * @param   arg2       The second argument, assuming that the messageId has a {1} token.
-	 * @param   arg3       The third argument, assuming that the messageId has a {2} token.
+	 * @param messageId
+	 *            The message key.
+	 * @param arg1
+	 *            The first argument, assuming that the messageId has a {0}
+	 *            token.
+	 * @param arg2
+	 *            The second argument, assuming that the messageId has a {1}
+	 *            token.
+	 * @param arg3
+	 *            The third argument, assuming that the messageId has a {2}
+	 *            token.
 	 *
-	 * @return  The internationalized message.
+	 * @return The internationalized message.
 	 */
 	public String replace(String messageId, String arg1, String arg2, String arg3) {
 		ExtFacesContext extFacesContext = ExtFacesContext.getInstance();
@@ -97,17 +116,27 @@ public class I19N extends I19NCompat {
 	}
 
 	/**
-	 * Gets the message associated with the specified messageId according to the locale in the current FacesContext.
-	 * This method is primarily meant to be called via EL, providing the implementation supports passing parameters
+	 * Gets the message associated with the specified messageId according to the
+	 * locale in the current FacesContext. This method is primarily meant to be
+	 * called via EL, providing the implementation supports passing parameters
 	 * (like JBoss EL).
 	 *
-	 * @param   messageId  The message key.
-	 * @param   arg1       The first argument, assuming that the messageId has a {0} token.
-	 * @param   arg2       The second argument, assuming that the messageId has a {1} token.
-	 * @param   arg3       The third argument, assuming that the messageId has a {2} token.
-	 * @param   arg4       The fourth argument, assuming that the messageId has a {3} token.
+	 * @param messageId
+	 *            The message key.
+	 * @param arg1
+	 *            The first argument, assuming that the messageId has a {0}
+	 *            token.
+	 * @param arg2
+	 *            The second argument, assuming that the messageId has a {1}
+	 *            token.
+	 * @param arg3
+	 *            The third argument, assuming that the messageId has a {2}
+	 *            token.
+	 * @param arg4
+	 *            The fourth argument, assuming that the messageId has a {3}
+	 *            token.
 	 *
-	 * @return  The internationalized message.
+	 * @return The internationalized message.
 	 */
 	public String replace(String messageId, String arg1, String arg2, String arg3, String arg4) {
 		ExtFacesContext extFacesContext = ExtFacesContext.getInstance();
@@ -123,29 +152,37 @@ public class I19N extends I19NCompat {
 
 		if (key != null) {
 
-			ExtFacesContext extFacesContext = ExtFacesContext.getInstance();
-			Locale locale = extFacesContext.getLocale();
+			if (key.startsWith(Stub.PREFIX)) {
+				// TODO locale
+				// TODO cacheing
+				message = Stub.get(key);
 
-			if (cacheEnabled) {
-
-				String messageKey = key;
-
-				if (locale != null) {
-					messageKey = locale.toString().concat(key);
-				}
-
-				message = cache.get(messageKey);
-
-				if (message == null) {
-					message = extFacesContext.getMessage(locale, key);
-
-					if (message != null) {
-						cache.put(messageKey, message);
-					}
-				}
 			}
-			else {
-				message = extFacesContext.getMessage(locale, key);
+
+			if (message == null) {
+				ExtFacesContext extFacesContext = ExtFacesContext.getInstance();
+				Locale locale = extFacesContext.getLocale();
+
+				if (cacheEnabled) {
+
+					String messageKey = key;
+
+					if (locale != null) {
+						messageKey = locale.toString().concat(key);
+					}
+
+					message = cache.get(messageKey);
+
+					if (message == null) {
+						message = extFacesContext.getMessage(locale, key);
+
+						if (message != null) {
+							cache.put(messageKey, message);
+						}
+					}
+				} else {
+					message = extFacesContext.getMessage(locale, key);
+				}
 			}
 		}
 
@@ -153,8 +190,9 @@ public class I19N extends I19NCompat {
 	}
 
 	/**
-	 * This method is required by the ResourceBundle abstract class, but it will never be called in the normal running
-	 * of a JSF webapp using the EL. Therefore, it just returns an empty Enumeration of Strings.
+	 * This method is required by the ResourceBundle abstract class, but it will
+	 * never be called in the normal running of a JSF webapp using the EL.
+	 * Therefore, it just returns an empty Enumeration of Strings.
 	 */
 	@Override
 	public Enumeration<String> getKeys() {
