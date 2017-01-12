@@ -6,12 +6,17 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:p="http://primefaces.org/ui"
-	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:func="http://joolz.test/functions">
 
 	<h:head />
 
 	<h:body>
 		<h:outputText value="#{myBean.text}" />
+		<br />
+		<h:outputText value="#{func:hello()}" />
+		<br />
+		<h:outputText value="#{func:upme('make this uppercase')}" />
 	</h:body>
 
 </html>
