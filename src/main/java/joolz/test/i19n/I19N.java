@@ -152,35 +152,32 @@ public class I19N extends I19NCompat {
 
 		if (key != null) {
 
-			if (key.startsWith(Stub.PREFIX)) {
-				// TODO locale
-				// TODO cacheing
-				message = Stub.get(key);
+			ExtFacesContext extFacesContext = ExtFacesContext.getInstance();
+			Locale locale = extFacesContext.getLocale();
 
-			}
+			if (cacheEnabled) {
 
-			if (message == null) {
-				ExtFacesContext extFacesContext = ExtFacesContext.getInstance();
-				Locale locale = extFacesContext.getLocale();
+				String messageKey = key;
 
-				if (cacheEnabled) {
+				if (locale != null) {
+					messageKey = locale.toString().concat(key);
+				}
 
-					String messageKey = key;
+				message = cache.get(messageKey);
 
-					if (locale != null) {
-						messageKey = locale.toString().concat(key);
-					}
-
-					message = cache.get(messageKey);
-
+				if (message == null) {
+					message = Stub.get(key, locale);
 					if (message == null) {
 						message = extFacesContext.getMessage(locale, key);
-
-						if (message != null) {
-							cache.put(messageKey, message);
-						}
 					}
-				} else {
+
+					if (message != null) {
+						cache.put(messageKey, message);
+					}
+				}
+			} else {
+				message = Stub.get(key, locale);
+				if (message == null) {
 					message = extFacesContext.getMessage(locale, key);
 				}
 			}
