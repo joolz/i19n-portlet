@@ -16,5 +16,11 @@
 		<function-class>joolz.test.Functions</function-class>
 		<function-signature>String upme(java.lang.String)</function-signature>
 	</function>
+	
+	<function>
+		<function-name>now</function-name>
+		<function-class>joolz.test.Functions</function-class>
+		<function-signature>String now()</function-signature>
+	</function>
 
 </facelet-taglib>

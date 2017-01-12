@@ -14,9 +14,15 @@
 	<h:body>
 		<h:outputText value="#{myBean.text}" />
 		<br />
+		<h:outputText value="#{func:now()}" />
+		<br />
 		<h:outputText value="#{func:hello()}" />
 		<br />
 		<h:outputText value="#{func:upme('make this uppercase')}" />
+		<br />
+		<h:outputText value="#{i18n['i19n-portlet-hello-world']}" />
+		<br />
+		<h:outputText value="#{i19n['text-from-i19n']}" />
 	</h:body>
 
 </html>
